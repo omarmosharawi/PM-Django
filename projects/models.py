@@ -18,7 +18,7 @@ class ProjectStatus(models.IntegerChoices):
     CANCELED = 4, 'Canceled'
 
 
-class Projects(models.Model):
+class Project(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
     status = models.IntegerField(choices=ProjectStatus.choices, default=ProjectStatus.PENDING)
@@ -34,7 +34,7 @@ class Projects(models.Model):
 class Task(models.Model):
     description = models.TextField()
     is_completed = models.BooleanField(default=False)
-    project = models.ForeignKey(Projects, on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.description
