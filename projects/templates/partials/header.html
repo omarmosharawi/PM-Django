@@ -7,11 +7,19 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{% url 'Project_List' %}">{% trans 'Home' %}</a>
         </li>
       </ul>
+      <form method="get" action="{% url 'Project_List' %}" class="d-flex">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="{% trans 'Search' %}" value="{{request.GET.q}}">
+          <button class="btn btn-outline-light" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </nav>
