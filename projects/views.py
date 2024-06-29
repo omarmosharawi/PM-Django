@@ -2,11 +2,12 @@ from django.shortcuts import render
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from . import models, forms
 from django.urls import reverse_lazy, reverse
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 
 
-class ProjectListView(ListView):
+class ProjectListView(LoginRequiredMixin, ListView):
     model = models.Project
     template_name = 'projects/list.html'
     paginate_by = 3
@@ -20,14 +21,14 @@ class ProjectListView(ListView):
         return query_set.filter(**where)
 
 
-class ProjectCreateView(CreateView):
+class ProjectCreateView(LoginRequiredMixin, CreateView):
     model = models.Project
     form_class = forms.ProjectCreateForm
     template_name = 'projects/create.html'
     success_url = reverse_lazy('Project_List')
 
 
-class ProjectUpdateView(UpdateView):
+class ProjectUpdateView(LoginRequiredMixin, UpdateView):
     model = models.Project
     form_class = forms.ProjectUpdateForm
     template_name = 'projects/update.html'
@@ -37,13 +38,13 @@ class ProjectUpdateView(UpdateView):
         return reverse('Project_Update', args=[self.object.id])
 
 
-class ProjectDeleteView(DeleteView):
+class ProjectDeleteView(LoginRequiredMixin, DeleteView):
     model = models.Project
     template_name = 'projects/delete.html'
     success_url = reverse_lazy('Project_List')
 
 
-class TaskCreateView(CreateView):
+class TaskCreateView(LoginRequiredMixin, CreateView):
     model = models.Task
     fields = ['project', 'description']
     http_method_names = ['post']
