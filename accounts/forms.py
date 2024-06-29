@@ -1,7 +1,7 @@
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
 from django import forms
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext as _   # when to make lang to arabic
 
 attributes = {'class': 'form-control'}
 
