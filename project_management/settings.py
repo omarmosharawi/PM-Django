@@ -79,15 +79,19 @@ WSGI_APPLICATION = 'project_management.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'PM-Django',
-        'USER': 'postgres',
-        'PASSWORD': '40403102',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': env('projects-management-postgres'),
+        'USER': env('default'),
+        'PASSWORD': env('A7Xrex3jsMiG'),
+        'HOST': env('ep-falling-haze-a4nzzcx7-pooler.us-east-1.aws.neon.tech'),
+        'PORT': env(''),
     }
 }
 
