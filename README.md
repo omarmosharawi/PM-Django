@@ -84,3 +84,10 @@ For any inquiries or feedback, please contact:
 - **omarmosharawi@gmail.com** - Email
 
 ---
+![image](https://github.com/omarmosharawi/PM-Django/assets/125395589/739a51bc-cd3f-4a5e-aa23-5e37d387ec2c)
+![image](https://github.com/omarmosharawi/PM-Django/assets/125395589/793380a8-d675-47df-80dc-c685dd4b4e89)
+![image](https://github.com/omarmosharawi/PM-Django/assets/125395589/c4931adf-3c83-4440-b5e0-03ddaef66f39)
+![image](https://github.com/omarmosharawi/PM-Django/assets/125395589/7adc87bb-3059-48f9-8b60-460dc323af40)
+![image](https://github.com/omarmosharawi/PM-Django/assets/125395589/3ecaafbc-b5da-4e9f-88e0-69a110261220)
+![image](https://github.com/omarmosharawi/PM-Django/assets/125395589/9bb9f5fd-9836-48d7-9a6b-0c31d9cf0815)
+![image](https://github.com/omarmosharawi/PM-Django/assets/125395589/4acf4abe-a05f-4513-aa70-1dd4b295e2f4)
