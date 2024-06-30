@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-nep=+pwm2j9jc4a9uf=i*iy0fv3s7dt66%im2g&rpbn@h^c0_%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -79,19 +79,15 @@ WSGI_APPLICATION = 'project_management.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-import environ
-
-env = environ.Env()
-environ.Env.read_env()
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env('projects-management-postgres'),
-        'USER': env('default'),
-        'PASSWORD': env('A7Xrex3jsMiG'),
-        'HOST': env('ep-falling-haze-a4nzzcx7-pooler.us-east-1.aws.neon.tech'),
-        'PORT': env(''),
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
@@ -131,11 +127,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Default primary key field type
